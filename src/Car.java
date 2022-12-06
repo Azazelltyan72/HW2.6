@@ -9,6 +9,15 @@ public class Car extends MotorTransport implements Competing {
     }
 
     @Override
+    public void printType() {
+        if (bodyType == null) {
+            System.out.println("Данных по транспортному средству недостаточно");
+        } else {
+            System.out.println(getBodyType());
+        }
+    }
+
+    @Override
     public void finishMoving() {
         System.out.println(color + " легковой автомобиль с коробкой передач типа " + transmission + " заканчивает движение.");
     }

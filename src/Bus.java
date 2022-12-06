@@ -7,6 +7,14 @@ public class Bus extends MotorTransport implements Competing {
     }
 
     @Override
+    public void printType() {
+        if (capacityType == null) {
+            System.out.println("Данных по транспортному средству недостаточно");
+        } else {
+            System.out.println(getCapacityType());
+        }
+    }
+    @Override
     public void finishMoving() {
         System.out.println(color + " автобус заканчивает движение.");
     }
@@ -30,7 +38,8 @@ public class Bus extends MotorTransport implements Competing {
     }
 
     public void setColor(String color) {
-        if (color == null || color.isEmpty() || color.isBlank()) {
+        if (color ==
+ null || color.isEmpty() || color.isBlank()) {
             this.color = "Красный";
         } else {
             this.color = color;

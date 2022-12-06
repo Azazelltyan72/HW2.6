@@ -4,6 +4,7 @@ public abstract class MotorTransport {
     private double engineCapacity;
 
     public abstract void startMoving();
+    public abstract void printType();
     public abstract void finishMoving();
 
     public MotorTransport(String brand, String model, double engineCapacity) {

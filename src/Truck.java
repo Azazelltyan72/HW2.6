@@ -11,10 +11,19 @@ public class Truck extends MotorTransport implements Competing{
     }
 
     @Override
+    public void printType() {
+        if (weightGain == null) {
+            System.out.println("Данных по транспортному средству недостаточно");
+        } else {
+            System.out.println(getWeightGain());
+        }
+    }
+
+    @Override
     public void finishMoving() {
         System.out.println("Грузовик заканчивает движение.");
     }
-    public WeightGain weightGain() {
+    public WeightGain getWeightGain() {
         return weightGain;
     }
 
